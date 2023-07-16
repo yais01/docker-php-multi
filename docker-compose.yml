@@ -1,0 +1,29 @@
+version: '3.9'
+services:
+  php56:
+    image: php:5.6-apache
+    stdin_open: true
+    tty: true
+    restart: always
+    ports:
+      - 8056:80
+    volumes:
+      - ./php_5.6:/var/www/html/
+  php74:
+    image: php:7.4-apache
+    stdin_open: true
+    tty: true
+    restart: always
+    ports:
+      - 8074:80
+    volumes:
+      - ./php_7.4:/var/www/html/
+  php81:
+    image: php:8.1-apache
+    stdin_open: true
+    tty: true
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - ./php_8.1:/var/www/html/
